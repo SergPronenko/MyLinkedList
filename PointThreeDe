@@ -1,0 +1,70 @@
+package com.company;
+
+/**
+ * Created by Admin on 20.01.2016.
+ */
+public class PointThreeDe {
+    private double x;
+    private double y;
+    private double z;
+
+    public PointThreeDe() {
+    }
+
+    public PointThreeDe(double z, double x, double y) {
+        this.z = z;
+        this.x = x;
+        this.y = y;
+    }
+
+    public void draw (double z, double x, double y){
+        setX(x);
+        setY(y);
+        setZ(z);
+    }
+
+    public void clear (){
+        x = 0;
+        y = 0;
+        z = 0;
+    }
+
+    public void setAll (double z, double x, double y){
+        setX(x);
+        setY(y);
+        setZ(z);
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
+    @Override
+    public String toString() {
+        return "PointThreeDe{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
+    }
+}
