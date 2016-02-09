@@ -1,0 +1,39 @@
+package com.company;
+
+
+/**
+ * Created by admin on 09.02.2016.
+ */
+public class MyArrayList {
+    private  int arr[];
+    private  int index;
+    private  int size;
+    private static final int DEFAULT_CAPACITY = 10;
+
+    private void growArray() {
+        int[] newArray = new int[arr.length * 3/2+1];
+        System.arraycopy(arr, 0, newArray, 0, index - 1);
+        arr = newArray;
+    }
+
+
+    public void add(int value){
+        if (index == arr.length)
+        growArray();
+        arr[index] = value;
+        index++;
+        size++;
+    }
+
+    public int get(int index) {
+        return arr[index];
+    }
+
+    public void set(int index, int value) {
+        arr[index] = value;
+    }
+
+    public int size() {
+        return size;
+    }
+}
